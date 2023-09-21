@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 
 import { LayoutGroup, MotionDiv } from '@/core/lib/motion';
 
-import { Banner } from './components';
+import { Banner, Footer } from './components';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LayoutGroup>
           <Banner />
           <MotionDiv layout>{children}</MotionDiv>
+          <MotionDiv layout>
+            <Footer />
+          </MotionDiv>
         </LayoutGroup>
       </body>
     </html>

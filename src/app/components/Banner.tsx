@@ -1,7 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+
+import { AnimatePresence, MotionDiv } from '@/core/lib/motion';
 
 export default function Banner() {
   const [isDismissed, setIsDismissed] = useState(true);
@@ -16,10 +17,10 @@ export default function Banner() {
   }, []);
 
   return (
-    <motion.div layout>
+    <MotionDiv layout>
       <AnimatePresence>
         {!isDismissed && (
-          <motion.div
+          <MotionDiv
             className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -81,9 +82,9 @@ export default function Banner() {
                 </svg>
               </button>
             </div>
-          </motion.div>
+          </MotionDiv>
         )}
       </AnimatePresence>
-    </motion.div>
+    </MotionDiv>
   );
 }

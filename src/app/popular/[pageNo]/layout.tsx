@@ -1,7 +1,7 @@
-import { log, chalk, dump } from '@/core/utils';
+import { log, chalk, dump } from '@/core/utils/log';
 
-import { getPopularMovies } from './data';
-import { MovieNavigation } from './components';
+import { getPopularMovies } from './data/movies';
+import MovieNavigation from './components/MovieNavigation';
 
 export default async function Layout({
   params,

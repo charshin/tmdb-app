@@ -2,9 +2,10 @@
 
 import { useCallback, useMemo } from 'react';
 
-import { Pagination as PaginationModel } from '@/core/types/models';
-import { useMediaQuery, chalk, log } from '@/core/utils';
-import { MAX_TOTAL_PAGES } from '@/core/config';
+import { Pagination as PaginationModel } from '@/core/types/models/pagination';
+import { useMediaQuery } from '@/core/utils/responsive';
+import { chalk, log } from '@/core/utils/log';
+import { MAX_TOTAL_PAGES } from '@/core/config/constants';
 
 const Pager = ({
   pageNo,

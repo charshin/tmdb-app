@@ -1,6 +1,6 @@
-import { log, chalk, dump } from '@/core/utils';
+import { log, chalk, dump } from '@/core/utils/log';
 
-import { getPopularMovies } from '../data';
+import { getPopularMovies } from '../data/movies';
 
 import MovieCard from './MovieCard';
 

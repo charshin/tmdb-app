@@ -1,4 +1,4 @@
-import { BACKDROP_DIMENSION, PAGE_SIZE } from '@/core/config';
+import { BACKDROP_DIMENSION, PAGE_SIZE } from '@/core/config/constants';
 
 export default async function MovieListSkeleton() {
   return (

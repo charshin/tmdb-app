@@ -3,11 +3,14 @@ import Joi from 'joi';
 
 import { fetchTMDB } from '@/core/api/rest';
 import { validate } from '@/core/api/validator';
-import { log, chalk, dump, convertMovieDTOToModel, getErrorMessage } from '@/core/utils';
-import { Movie as MovieSchema } from '@/core/types/schemas';
-import { Movie as MovieDTO } from '@/core/types/dtos';
-import { Movie as MovieModel, Pagination as PaginationModel } from '@/core/types/models';
-import { PAGE_SIZE } from '@/core/config';
+import { convertMovieDTOToModel } from '@/core/utils/data';
+import { log, chalk, dump } from '@/core/utils/log';
+import { getErrorMessage } from '@/core/utils/error';
+import { Movie as MovieSchema } from '@/core/types/schemas/movie';
+import { Movie as MovieDTO } from '@/core/types/dtos/movie';
+import { Movie as MovieModel } from '@/core/types/models/movie';
+import { Pagination as PaginationModel } from '@/core/types/models/pagination';
+import { PAGE_SIZE } from '@/core/config/constants';
 
 export const getPopularMovies = async ({ pageNo = 1 }: { pageNo?: number }) => {
   try {

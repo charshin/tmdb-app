@@ -10,6 +10,7 @@ import { convertFromDirectory } from 'joi-to-typescript';
     debug: true,
     sortPropertiesByName: false,
     ignoreFiles: ['index.ts'],
+    omitIndexFiles: true,
   });
 
   console.log(result ? 'Success!' : 'Failed');

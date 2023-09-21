@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-import { log } from '@/core/utils';
+import { log } from '@/core/utils/log';
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   useEffect(() => {

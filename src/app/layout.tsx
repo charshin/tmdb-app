@@ -4,7 +4,8 @@ import { Inter } from 'next/font/google';
 
 import { LayoutGroup, MotionDiv } from '@/core/lib/motion';
 
-import { Banner, Footer } from './components';
+import Banner from './components/Banner';
+import Footer from './components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 

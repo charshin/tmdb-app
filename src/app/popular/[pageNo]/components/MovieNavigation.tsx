@@ -1,8 +1,8 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-import { Pager } from '@/core/components';
-import { Pagination as PaginationModel } from '@/core/types/models';
+import Pager from '@/core/components/Pager';
+import { Pagination as PaginationModel } from '@/core/types/models/pagination';
 
 export default function MovieNavigation({ pagination }: { pagination: PaginationModel }) {
   const router = useRouter();

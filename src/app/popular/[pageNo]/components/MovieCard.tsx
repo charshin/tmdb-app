@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import type { Movie as MovieModel } from '@/core/types/models';
-import { BACKDROP_ALT_TEXT, BACKDROP_DIMENSION, BLUR_DATA_URL } from '@/core/config';
+import type { Movie as MovieModel } from '@/core/types/models/movie';
+import { BACKDROP_ALT_TEXT, BACKDROP_DIMENSION, BLUR_DATA_URL } from '@/core/config/constants';
 import DefaultMovieBackdrop from '@/core/assets/img/movie-backdrop.jpeg';
 
 export default function MovieCard({ title, backdrop, releaseDate }: MovieModel) {

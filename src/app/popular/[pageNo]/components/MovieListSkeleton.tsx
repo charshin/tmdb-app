@@ -1,6 +1,6 @@
 import { BACKDROP_DIMENSION, PAGE_SIZE } from '@/core/config/constants';
 
-export default async function MovieListSkeleton() {
+export default function MovieListSkeleton() {
   return (
     <div className="flex flex-wrap justify-center gap-10">
       {[...Array(PAGE_SIZE)].map((_, idx) => (
@@ -10,9 +10,9 @@ export default async function MovieListSkeleton() {
             className="bg-slate-500"
           />
           <div className="grid grid-rows-2 gap-4 p-4">
-            <div className="h-2 rounded bg-slate-500"></div>
+            <div className="h-2 rounded bg-slate-500" />
             <div className="grid grid-cols-3 gap-4">
-              <div className="col-span-1 h-2 rounded bg-slate-500"></div>
+              <div className="col-span-1 h-2 rounded bg-slate-500" />
             </div>
           </div>
         </div>

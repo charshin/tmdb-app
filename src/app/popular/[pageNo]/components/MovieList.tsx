@@ -8,7 +8,7 @@ export default async function MovieList({ pageNo }: { pageNo: number }) {
   const { movies } = await getPopularMovies({ pageNo });
   log.debug(chalk.green(`Popular movies - Page ${pageNo}:\n`), dump(movies));
 
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
+  // await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return (
     <div className="flex flex-wrap justify-center gap-10">

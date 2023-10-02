@@ -8,13 +8,14 @@ import { log, chalk, dump } from '@/core/utils/log';
 import { getErrorMessage } from '@/core/utils/error';
 import { Movie as MovieSchema } from '@/core/types/schemas/movie';
 import { Movie as MovieDTO } from '@/core/types/dtos/movie';
-import { Movie as MovieModel } from '@/core/types/models/movie';
 import { Pagination as PaginationModel } from '@/core/types/models/pagination';
 import { PAGE_SIZE } from '@/core/config/constants';
 
 export const getPopularMovies = async ({ pageNo = 1 }: { pageNo?: number }) => {
   try {
-    const data = await fetchTMDB(`/movie/popular?language=en-US&page=${pageNo}`);
+    const data = await fetchTMDB(
+      `/discover/movie?include_adult=false&include_video=false&sort_by=popularity.desc&without_genres=27%2C53&language=en-US&page=${pageNo}`,
+    );
 
     log.debug(chalk.green('getPopularMovies'), dump(data));
 

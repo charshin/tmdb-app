@@ -18,13 +18,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <LayoutGroup>
-          <Banner />
-          <MotionDiv layout>{children}</MotionDiv>
-          <MotionDiv layout>
-            <Footer />
-          </MotionDiv>
-        </LayoutGroup>
+        <div className="relative min-h-screen pb-14">
+          <LayoutGroup>
+            <Banner />
+            <MotionDiv layout className="p-10">
+              {children}
+            </MotionDiv>
+            <MotionDiv
+              layout
+              className="absolute bottom-0 flex h-14 w-full items-center justify-center"
+            >
+              <Footer />
+            </MotionDiv>
+          </LayoutGroup>
+        </div>
       </body>
     </html>
   );
